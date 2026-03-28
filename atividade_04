@@ -1,0 +1,39 @@
+print('E-COMMERCE X ')
+login = input('Login: ')
+
+
+produtos  = ['','hd','memória ram','teclado','pendrive']
+valores  = [0,1000.99,2000.0,500.55,150.25]
+print('----' * 10)
+print(f'''
+    1  {produtos[1]} R$  {valores[1]}
+    2  {produtos[2]} R$  {valores[2]}
+    3  {produtos[3]} R$  {valores[4]}
+    4  {produtos[4]} R$  {valores[4]}
+      ''')
+
+prod_1 = int(input('Produto: '))
+prod_2 = int(input('Produto: '))
+prod_3 = int(input('Produto: '))
+
+
+carrinho =  []
+valor =  [] 
+
+
+carrinho.append(produtos[prod_1])
+print('No seu carrinho: ', carrinho)
+carrinho.append(produtos[prod_2])
+print('No seu carrinho: ', carrinho)
+carrinho.append(produtos[prod_3])
+print('No seu carrinho: ', carrinho)
+
+
+valor.extend([valores[prod_1], valores[prod_2], valores[prod_3]])
+
+
+soma  =  sum(valor)
+
+
+print(carrinho)
+print('R$', soma)
